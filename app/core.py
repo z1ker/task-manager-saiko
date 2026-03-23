@@ -3,8 +3,10 @@ from app.storage import save, get_all
 
 def add_task(title):
     validate_title(title)
+    print("Start adding task")
     task = {"title": title, "done": False}
     save(task)
+    print("Task added:", title)
     return task
 
 def list_tasks():
