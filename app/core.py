@@ -7,7 +7,7 @@ def add_task(title):
     """Add a new task with the given title."""
     validate_title(title)
     print("Start adding task")
-    task = {"title": title2, "done": False}
+    task = {"title": title, "done": False}
     save(task)
     print("Task added:", title)
     return task
