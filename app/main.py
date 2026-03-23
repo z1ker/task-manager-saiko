@@ -1,6 +1,9 @@
+"""Main program loop for task management."""
+
 from app.core import add_task, list_tasks
 
 def run():
+    """Run the main input loop for the program."""
     while True:
         cmd = input("Enter command: ")
 
