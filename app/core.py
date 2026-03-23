@@ -1,9 +1,11 @@
 from app.validator import validate_title
-
-tasks = []
+from app.storage import save, get_all
 
 def add_task(title):
     validate_title(title)
     task = {"title": title, "done": False}
-    tasks.append(task)
+    save(task)
     return task
+
+def list_tasks():
+    return get_all()
