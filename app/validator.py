@@ -1,3 +1,3 @@
 def validate_title(title):
-    if not title or title.strip() == "":
-        raise ValueError("Empty title")
+    if not isinstance(title, str) or title.strip() == "":
+        raise ValueError("Invalid title")
