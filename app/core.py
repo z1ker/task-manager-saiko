@@ -6,6 +6,7 @@ def add_task(title):
     print("Start adding task")
     task = {"title": title, "done": False}
     save(task)
+    print("Task added:", title)
     return task
 
 def list_tasks():
