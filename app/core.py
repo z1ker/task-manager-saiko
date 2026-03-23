@@ -1,7 +1,10 @@
+"""Core functions for task management."""
+
 from app.validator import validate_title
 from app.storage import save, get_all
 
 def add_task(title):
+    """Add a new task with the given title."""
     validate_title(title)
     print("Start adding task")
     task = {"title": title, "done": False}
@@ -10,4 +13,5 @@ def add_task(title):
     return task
 
 def list_tasks():
+    """Return all saved tasks."""
     return get_all()
